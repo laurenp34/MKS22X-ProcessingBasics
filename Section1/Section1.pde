@@ -58,9 +58,13 @@ class Visualizer {
   void update() {
     //???WRITE THIS METHOD!!!
     for (int i = 0; i < values.length; i++) {
+      if (abs(values[i] + speeds[i]) > 100) {
+        speeds[i] *= -1;
+      }
       values[i] += speeds[i];
+        
       //??? keep them values between max/min value
-  
+      
       //??? reverse the speeds so they oscillate up/down when they reach max/min
 
       
