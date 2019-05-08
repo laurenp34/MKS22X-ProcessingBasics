@@ -47,9 +47,11 @@ class Visualizer {
     for (float v: values) {
       if (v < 0) { 
         fill(255, 0, 0); //red for negative. 
+        if (v > -50) fill(255,165,0);
         rect(curX+=sep, 120, sep, Math.abs(v));
       } else if (v > 0) {
         fill(0, 255, 0); //green for positive.
+        if (v < 50) fill(255,255,0);
         rect(curX+=sep, 120-v, sep, v);
       }
     }
